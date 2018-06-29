@@ -2,5 +2,5 @@
 
 <%= @song.name %>
   <%# byebug %>
-<%= link_to @song.artist.name, song.artist_path(artist) %>
-<%= link_to @song.genre.name, song.genre_path(genre) %>
+<%= link_to @song.artist.name, @song.artist_path(artist) %>
+<%= link_to @song.genre.name, @song.genre_path(genre) %>
