@@ -6,7 +6,7 @@ class SongsController < ApplicationController
 
       def new
         @song=Song.new
-        @song.save
+        
       end
 
       def show
