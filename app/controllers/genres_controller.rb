@@ -20,7 +20,7 @@ class GenresController < ApplicationController
 
   def update
     @genre = Genre.find(params[:id])
-    @genre.update(name: params[:name])
+    @genre.update(genre_params)
     redirect_to genre_path(@genre)
   end
 
@@ -30,8 +30,8 @@ class GenresController < ApplicationController
 
   private
 
-  def genre_params(*args)
-    params.require(:artist).permit(*args)
+  def genre_params
+    params.require(:genre).permit(:name)
   end
 
 end
